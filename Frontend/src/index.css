@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-ff {
+  font-family: "ITC Avant Garde Gothic Bold", sans-serif;
+}
+.bg-green-1000{
+  background: #497e2d4d;
+
+}
+.bg-gray-1000{
+  background: #161619;
+}
+.top-100{
+  top: 50rem;
+}
+
+.activeHistory {
+  background-color: rgb(55 65 81);
+  color: #333;
+}
+
+.activeHistory .capitalize {
+  color: #ffffff; /* Set text color to dark */
+}
