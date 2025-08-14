@@ -3,7 +3,7 @@ import React from 'react';
 const ContactUs = () => {
   
   return (
-    <section class="bg-black">
+    <section class="bg-[#1E293B]">
        <img
           src='/images/shape-4.png'
           alt="Background"
@@ -25,7 +25,7 @@ const ContactUs = () => {
               <label for="message" class="block mb-2 text-sm font-medium text-gray-400">Your message</label>
               <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 rounded-lg shadow-sm  bg-gray-700 border-gray-600 placeholder-gray-400 dtext-white focus:ring-primary-500 focus:border-primary-500" placeholder="Leave a comment..."></textarea>
           </div>
-          <button type="submit" class="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 w-40 h-12">Send message</button>
+          <button type="submit" class="text-white bg-gradient-to-r from-[#F43F5E] via-[#8B5CF6] to-[#8B5CF6] hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium sm:text-lg rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 w-40 h-12">Send message</button>
       </form>
   </div>
 </section>

@@ -22,8 +22,8 @@ const notFoundMiddleware = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler')
 
 app.use(cors({
-    // origin: 'http://localhost:5173',
-    origin: 'https://genius-gen.vercel.app',
+    origin: 'http://localhost:5173',
+    // origin: 'https://genius-gen.vercel.app',
     credentials: true
 }));
 // Handle preflight requests for all routes
@@ -74,3 +74,4 @@ const start = async function() {
 
 
 start();
+ 

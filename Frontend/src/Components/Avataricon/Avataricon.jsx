@@ -33,12 +33,12 @@ const Avataricon = () => {
         <div className="text-white mr-4 flex items-center gap-4 relative">
             <Link onClick={toggleLogout}>
                 <img
-                    src="/images/avatar.png"
-                    className="md:h-12 md:w-12 h-9 w-9"
+                    src="/images/avtar.jpg"
+                    className="md:h-12 md:w-12 h-9 w-9 rounded-full cursor-pointer object-fill"
                     alt="avatar"
                 />
             </Link>
-            <span className="font-bold text-lg md:block hidden">{user && user.name}</span>
+            <span className="font-semibold text-lg md:block hidden">{user && user.name}</span>
 
 
             {/* Toggle Logout Box */}

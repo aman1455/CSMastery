@@ -9,58 +9,55 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   const videoId = 'QCJET0iawEs';
 
-  // Options for the YouTube player
+ 
   const opts = {
     height: '100%',
     width: '100%',
     playerVars: {
-      autoplay: 0, // Autoplay disabled
+      autoplay: 0, 
     },
   };
  
   return (
   
-    <div className="bg-black min-h-screen relative">
-      <div className=' h-screen'>
-        <img
-          src='/images/shape-2.png'
-          alt="Background"
-          className="w-96 h-96 "
-        />
+    <div className="bg-[#1E293B] min-h-screen relative">
 
-        <img
-          src='/images/shape-4.png'
-          alt="Background"
-          className="absolute right-0 h-1/3  rotate-180"
-        />
-      < div className='absolute md:right-36 sm:right-36 right-4 top-80 mt-40 md:top-44 md:h-80 md:w-1/3 border-4 rounded-lg sm:top-96 sm:mt-20 sm:h-60 sm:w-2/3 md:mt-0 justify-center items-center flex h-60 w-11/12 '>
-        {/* YouTube video */}
-        
-          <YouTube videoId={videoId} opts={opts} className='absolute top-0 left-0 w-full h-full' />
-        
+      <div className="min-h-screen  flex flex-col sm:flex-row items-center justify-center gap-10 container mx-auto px-4 py-10 ">
+  {/* Left Section */}
+  <div className="flex flex-col max-w-xl text-white items-center sm:items-start">
+    <h1 className="sm:text-start text-center text-5xl md:text-6xl font-extrabold text-[#8B5CF6] mb-4 font-rubik-doodle-shadow">
+      CSMASTERY
+    </h1>
+    <p className="mb-6 text-base sm:text-lg md:text-lg text-[#E2E8F0] font-semibold sm:text-start text-center">
+      Welcome to CSMASTERY, your ultimate destination for intellectual growth and fun learning! 
+      Our mission is to empower minds through a fusion of enlightening blog content and captivating quizzes. 
+      At CSMASTERY, we believe that knowledge is the ultimate superpower, and we're here to equip you with the tools 
+      you need to unlock your full potential. Immerse yourself in our curated blog posts, crafted by AI to spark 
+      curiosity and inspire discovery. Then, put your intellect to the test with our thought-provoking quizzes, 
+      designed to challenge and entertain.
+    </p>
+    <a
+      href="/about"
+      className=" bg-gradient-to-r from-[#F43F5E] via-[#8B5CF6] to-[#8B5CF6] hover:bg-lime-500 text-[#E2E8F0] font-medium rounded-lg px-4 py-3 w-40 text-center"
+    >
+      Know More
+    </a>
+  </div>
 
-        </div>
+  {/* Right Section (Video/Image) */}
+  <div className="flex justify-center items-center">
+      <img src='/images/home.png' className=' w-3/4 h-full object-cover' />
+  </div>
+</div>
 
-        <div className=' text-6xl md:left-20 sm:left-20 left-7 absolute md:top-48 text-white font-rubik-doodle-shadow flex flex-col gap-6 md:w-2/4 justify-center sm:top-5 sm:w-4/5 top-4'>
-          <h1 className=' md:text-6xl text-5xl text-white font-rubik-doodle-shadow font-extrabold'>
-            Genius Gen
-          </h1>
-          <p className=' md:text-lg sm:text-lg text-base w-11/12  text-white font-rubik-doodle-shadown md:w-4/5 font-bold sm:w-full'>
-            Welcome to GeniusGen, your ultimate destination for intellectual growth and fun learning! Our mission is to empower minds through a fusion of enlightening blog content and captivating quizzes.
 
-            At GeniusGen, we believe that knowledge is the ultimate superpower, and we're here to equip you with the tools you need to unlock your full potential. Immerse yourself in our curated blog posts, crafted by AI to spark curiosity and inspire discovery. Then, put your intellect to the test with our thought-provoking quizzes, designed to challenge and entertain.
-          </p>
-          <Link to='/about' type="button" class="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 w-64 h-12">Know More</Link>
-        </div>
-      </div>
-
-      <div className=' h-screen w-full flex flex-col gap-14 items-center '>
-        <h1 className=' text-white md:text-6xl font-extrabold z-20 sm:text-5xl sm:mt-8 md:mt-0 mt-0 text-3xl'>Know About GeniusGen</h1>
+      <div className=' h-screen w-full flex flex-col gap-14 items-center mt-4 '>
+        <h1 className=' text-white md:text-6xl font-bold z-20 sm:text-5xl sm:mt-8 md:mt-0 mt-0 text-3xl'>Know About CSMASTERY</h1>
 
         <Card />
 
       </div>
-      <div className=' h-1/2'>
+      <div className=' mt-14  min-h-1/2'>
         <Feauters />
       </div>
 

@@ -74,7 +74,7 @@ const Product = () => {
   // Render the History component only when histories array is not empty
   return (
 
-    <div className='sm:ml-64 bg-black min-h-screen md:p-9 p-4 relative flex flex-col overflow-hidden'>
+    <div className='sm:ml-64 bg-black min-h-screen md:p-6 p-2 relative flex flex-col overflow-hidden'>
 
       <div className='fixed top-0 left-0 z-50 w-full'>
 
@@ -83,7 +83,7 @@ const Product = () => {
         <hr />
 
       </div>
-      <div className=" bg-black min-h-screen  p-4 relative flex flex-col  ">
+      <div className=" bg-black min-h-screen  p-2 relative flex flex-col  ">
         <div className=' flex gap-2 justify-center items-center'>
           <aside id="logo-sidebar" class="fixed  top-0 left-0  w-64 h-screen pt-20 transition-transform -translate-x-full  border-r  sm:translate-x-0 bg-black border-gray-700 mt-16" aria-label="Sidebar">
             <div class="h-full px-3 pb-4 overflow-y-auto bg-black">

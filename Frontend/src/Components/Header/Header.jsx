@@ -18,12 +18,12 @@ export default function Header() {
 
     return (
         <header className="sticky z-50 top-0 flex flex-col">
-            <nav className="bg-black text-gray-400 px-4 lg:px-6 py-2.5 text-xl">
+            <nav className="bg-[#1E293B] text-[#E2E8F0] px-4 lg:px-6 py-2.5 text-xl">
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                     <Link to="/" className="flex items-center">
                         <img
-                            src="/images/logo.png"
-                            className="h-12 w-32 md:block hidden"
+                            src="/images/Logo.svg"
+                            className="h-14 w-32 md:block hidden"
                             alt="Logo"
                         />
                     </Link>
@@ -41,7 +41,7 @@ export default function Header() {
                         <div className="flex items-center lg:order-2">
                             <Link
                                 to="/signin"
-                                className="text-gray-800 bg-gray-50 hover:bg-gray-200 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
+                                className="text-gray-900 bg-gray-50 hover:bg-gray-200 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
                             >
                                 <div className='w-16 justify-between flex'>
                                     <span><FontAwesomeIcon icon={faUserPlus} /></span>
@@ -50,7 +50,7 @@ export default function Header() {
                             </Link>
                             <Link
                                 to="/signup"
-                                className="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
+                                className="text-white bg-gradient-to-r from-[#F43F5E] via-[#8B5CF6] to-[#8B5CF6] font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
                             >
                                 <h3>Sign Up</h3>
                             </Link>
@@ -63,9 +63,9 @@ export default function Header() {
                                 <NavLink
                                     to="/"
                                     className={({ isActive }) =>
-                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-primary-1250" : "text-gray-700"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-white lg:p-0`
+                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-[#FBBF24]" : "text-[#E2E8F0]"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-[#FBBF24] lg:p-0`
                                     }
-                                    activeClassName="text-primary-1250"
+                                    activeClassName="text-[#FBBF24]"
                                 >
                                     Home
                                 </NavLink>
@@ -74,7 +74,7 @@ export default function Header() {
                                 <NavLink
                                     to="/about"
                                     className={({ isActive }) =>
-                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-primary-1250" : "text-gray-700"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-white lg:p-0`
+                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-[#FBBF24]" : "text-[#E2E8F0]"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-[#FBBF24] lg:p-0`
                                     }
                                 >
                                     Features
@@ -84,9 +84,9 @@ export default function Header() {
                                 <NavLink
                                     to="/product"
                                     className={({ isActive }) =>
-                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-primary-1250" : "text-gray-700"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-white lg:p-0`
+                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-[#FBBF24]" : "text-[#E2E8F0]"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-[#FBBF24] lg:p-0`
                                     }
-                                    activeClassName="text-primary-1250"
+                                    activeClassName="text-[#FBBF24]"
                                 >
                                     Get Started
                                 </NavLink>
@@ -95,9 +95,9 @@ export default function Header() {
                                 <NavLink
                                     to="/contactUs"
                                     className={({ isActive }) =>
-                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-primary-1250" : "text-gray-700"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-white lg:p-0`
+                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-[#FBBF24]" : "text-[#E2E8F0]"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-[#FBBF24] lg:p-0`
                                     }
-                                    activeClassName="text-primary-1250"
+                                    activeClassName="text-[#FBBF24]"
                                 >
                                     Contact Us
                                 </NavLink>
@@ -113,8 +113,8 @@ export default function Header() {
                     <li>
                         <NavLink
                             to="/"
-                            className="block py-2 pr-4 pl-3 duration-200 text-gray-700 border-b hover:bg-gray-700 border-gray-100  lg:hover:bg-transparent lg:border-0 hover:text-white lg:p-0"
-                            activeClassName="text-primary-1250"
+                            className="block py-2 pr-4 pl-3 duration-200 text-[#E2E8F0] border-b hover:bg-gray-700 border-gray-100  lg:hover:bg-transparent lg:border-0 hover:text-[#FBBF24] lg:p-0"
+                            activeClassName="text-[#FBBF24]"
                             onClick={toggleMobileNav}
                         >
                             Home
@@ -123,8 +123,8 @@ export default function Header() {
                     <li>
                         <NavLink
                             to="/about"
-                            className="block py-2 pr-4 pl-3 duration-200 text-gray-700 border-b hover:bg-gray-700 border-gray-100  lg:hover:bg-transparent lg:border-0 hover:text-white lg:p-0"
-                            activeClassName="text-primary-1250"
+                            className="block py-2 pr-4 pl-3 duration-200 text-[#E2E8F0] border-b hover:bg-gray-700 border-gray-100  lg:hover:bg-transparent lg:border-0 hover:text-[#FBBF24] lg:p-0"
+                            activeClassName="text-[#FBBF24]"
                             onClick={toggleMobileNav}
                         >
                             Features
@@ -133,8 +133,8 @@ export default function Header() {
                     <li>
                         <NavLink
                             to="/product"
-                            className="block py-2 pr-4 pl-3 duration-200 text-gray-700 border-b hover:bg-gray-700 border-gray-100 lg:hover:bg-transparent lg:border-0 hover:text-white lg:p-0"
-                            activeClassName="text-primary-1250"
+                            className="block py-2 pr-4 pl-3 duration-200 text-[#E2E8F0] border-b hover:bg-gray-700 border-gray-100 lg:hover:bg-transparent lg:border-0 hover:text-[#FBBF24] lg:p-0"
+                            activeClassName="text-[#FBBF24]"
                             onClick={toggleMobileNav}
                         >
                             Get Started
@@ -143,8 +143,8 @@ export default function Header() {
                     <li>
                         <NavLink
                             to="/contactUs"
-                            className="block py-2 pr-4 pl-3 duration-200 text-gray-700 border-b hover:bg-gray-700 border-gray-100  lg:hover:bg-transparent lg:border-0 hover:text-white lg:p-0"
-                            activeClassName="text-primary-1250"
+                            className="block py-2 pr-4 pl-3 duration-200 text-[#E2E8F0] border-b hover:bg-gray-700 border-gray-100  lg:hover:bg-transparent lg:border-0 hover:text-[#FBBF24] lg:p-0"
+                            activeClassName="text-[#FBBF24]"
                             onClick={toggleMobileNav}
                         >
                             Contact Us
