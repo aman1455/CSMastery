@@ -1,12 +1,12 @@
-# Genius Gen
+# CSMastery
 
-Genius Gen is a comprehensive learning platform that offers AI-generated blog posts and interactive quizzes on various topics. Whether you're a curious learner or an avid quiz enthusiast, Genius Gen provides a personalized and engaging learning experience.
+CSMastery is a comprehensive learning platform that offers AI-generated blog posts and interactive quizzes on various topics. Whether you're a curious learner or an avid quiz enthusiast, CSMastery provides a personalized and engaging learning experience.
 
 [![snap.jpg](https://i.postimg.cc/63d4h1wq/snap.jpg)](https://postimg.cc/TL3Pd0Kv)
 
 
 
-Visit the site here - [Genius Gen](https://genius-gen.vercel.app/)
+Visit the site here - [CSMastery](https://genius-gen.vercel.app/)
 
 How to use See the full video - [Youtube Tutorial](https://youtu.be/QCJET0iawEs?si=UCbwL5mcisjrdRsC)
 
@@ -53,7 +53,7 @@ How to use See the full video - [Youtube Tutorial](https://youtu.be/QCJET0iawEs?
 
 ## Database Initialization
 
-To replicate the database setup for Genius Gen, follow these steps:
+To replicate the database setup for CSMastery, follow these steps:
 
 1. Install MongoDB on your local machine or set up a MongoDB instance on a cloud platform.
 2. Create a new MongoDB database named "geniusgen" (or a name of your choice).
@@ -61,7 +61,7 @@ To replicate the database setup for Genius Gen, follow these steps:
 
 ## Required Packages
 
-To replicate the Genius Gen project environment, ensure you have the following packages installed:
+To replicate the CSMastery project environment, ensure you have the following packages installed:
 
 - Node.js
 - npm (Node Package Manager)
@@ -71,7 +71,6 @@ To replicate the Genius Gen project environment, ensure you have the following p
 
 ## Authors
 
-- [Shreyam Kundu](https://github.com/ShreyamKundu)
-- [Snikdhendu Pramanik](https://github.com/snikdhendu)
-- [Sounab Bhattacharjee](https://github.com/Sounabbhtchrzi)
+- [Aman Negi](https://github.com/aman1455)
+
 
