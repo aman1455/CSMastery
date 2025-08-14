@@ -22,7 +22,7 @@ const Home = () => {
   
     <div className="bg-[#1E293B] min-h-screen relative">
 
-      <div className="min-h-screen  flex flex-col sm:flex-row items-center justify-center gap-10 container mx-auto px-4 py-10 ">
+      <div className="min-h-screen  flex flex-col sm:flex-row items-center justify-center gap-10 py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6 ">
   {/* Left Section */}
   <div className="flex flex-col max-w-xl text-white items-center sm:items-start">
     <h1 className="sm:text-start text-center text-5xl md:text-6xl font-extrabold text-[#8B5CF6] mb-4 font-rubik-doodle-shadow">
