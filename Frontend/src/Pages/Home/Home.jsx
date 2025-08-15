@@ -26,12 +26,12 @@ const Home = () => {
   {/* Left Section */}
   <div className="flex flex-col max-w-xl text-white items-center sm:items-start">
     <h1 className="sm:text-start text-center text-5xl md:text-6xl font-extrabold text-[#8B5CF6] mb-4 font-rubik-doodle-shadow">
-      CSMASTERY
+      CSMastery
     </h1>
     <p className="mb-6 text-base sm:text-lg md:text-lg text-[#E2E8F0] font-semibold sm:text-start text-center">
-      Welcome to CSMASTERY, your ultimate destination for intellectual growth and fun learning! 
+      Welcome to CSMastery, your ultimate destination for intellectual growth and fun learning! 
       Our mission is to empower minds through a fusion of enlightening blog content and captivating quizzes. 
-      At CSMASTERY, we believe that knowledge is the ultimate superpower, and we're here to equip you with the tools 
+      At CSMastery, we believe that knowledge is the ultimate superpower, and we're here to equip you with the tools 
       you need to unlock your full potential. Immerse yourself in our curated blog posts, crafted by AI to spark 
       curiosity and inspire discovery. Then, put your intellect to the test with our thought-provoking quizzes, 
       designed to challenge and entertain.
@@ -52,7 +52,7 @@ const Home = () => {
 
 
       <div className=' h-screen w-full flex flex-col gap-14 items-center mt-4 '>
-        <h1 className=' text-white md:text-6xl font-bold z-20 sm:text-5xl sm:mt-8 md:mt-0 mt-0 text-3xl'>Know About CSMASTERY</h1>
+        <h1 className=' text-white md:text-6xl font-bold z-20 sm:text-5xl sm:mt-8 md:mt-0 mt-0 text-3xl'>Know About CSMastery</h1>
 
         <Card />
 
