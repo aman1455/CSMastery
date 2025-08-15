@@ -10,21 +10,21 @@ const Card = () => {
 >
   <div
     alt="image here"
-    class="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-16 -right-10 w-2/5 h-3/5 rounded-lg bg-[#E2E8F0] md:flex justify-center items-center  sm:flex hidden"
+    class="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-16 -right-10 w-2/5 min-h-4/5 rounded-lg bg-[#E2E8F0] md:flex justify-center items-center  sm:flex hidden"
   >
     {/* <div className=' shadow-2xl shadow-slate-50 rounded-full flex items-center justify-center h-56 w-56 bg-yellow-300 '> */}
-    <img src="/images/programmer.png" alt="" className=' h-64 w-full object-contain' />
+    <img src="/images/programmer.png" alt="" className=' h-70 w-full object-contain' />
     {/* </div> */}
 </div>
     {/* <h2 class="text-2xl font-bold mb-2 text-gray-100">Dark Card</h2> */}
     <div class="bg-gray-transparent p-6">
-    <h2 class="md:text-3xl sm:text-3xl text-2xl font-bold mb-4 text-yellow-500">About CSMASTERY</h2>
+    <h2 class="md:text-3xl sm:text-3xl text-2xl font-bold mb-4 text-yellow-500">About CSMastery</h2>
     <p class="sm:text-lg md:text-lg text-base text-white leading-relaxed ">
-        Welcome to CSMASTERY, your ultimate destination for intellectual growth and fun learning! 
+        Welcome to CSMastery, your ultimate destination for intellectual growth and fun learning! 
         Our mission is to empower minds through a fusion of enlightening blog content and captivating quizzes.
     </p>
     <p class="md:text-lg text-base text-white leading-relaxed mt-4 text-left md:w-1/2 sm:text-sm sm:w-72">
-        At CSMASTERY, we believe that knowledge is the ultimate superpower, and we're here to equip 
+        At CSMastery, we believe that knowledge is the ultimate superpower, and we're here to equip 
         you with the tools you need to unlock your full potential. Immerse yourself in our curated 
         blog posts, crafted by AI to spark curiosity and inspire discovery. Then, put your intellect 
         to the test with our thought-provoking quizzes, designed to challenge and entertain.

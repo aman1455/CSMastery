@@ -13,7 +13,7 @@ const Feauters = () => {
   <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
       <div class="max-w-screen-md mb-8 lg:mb-16">
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white ">Prepare for Exams  like Genius</h2>
-          <p class=" sm:text-xl text-gray-400">Here at CSMASTERY we focus on  technology based learning, innovation, and educational growth.</p>
+          <p class=" sm:text-xl text-gray-400">Here at CSMastery we focus on  technology based learning, innovation, and educational growth.</p>
       </div>
       <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
           <div>
