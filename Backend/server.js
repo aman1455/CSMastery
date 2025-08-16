@@ -72,7 +72,7 @@ app.post('/chat', async (req, res) => {
   try {
     const userInput = req.body?.userInput;
     const regenerate = req.body?.regenerate === 'true';
-    console.log('incoming /chat req', userInput)
+    // console.log('incoming /chat req', userInput)
     if (!userInput) {
       return res.status(400).json({ error: 'Invalid request body' });
     }

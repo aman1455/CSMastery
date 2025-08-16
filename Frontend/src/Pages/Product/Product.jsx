@@ -4,7 +4,7 @@ import SearchBox from '../../Components/SearchBox/SearchBox';
 import History from '../../Components/Historybox/History';
 import { useSelector, useDispatch } from 'react-redux';
 import MarkdownComponent from '../../Components/Markdown/MarkdownComponent';
-import { axiosInstance } from '../../../utils';
+import axiosInstance  from '../../../utils';
 import { setLoading, setUser, setQuiz } from '../../../features/userSlice';
 import Header from '../../Components/Header/Header';
 import {  faArrowUpRightFromSquare, faRedoAlt } from '@fortawesome/free-solid-svg-icons';
@@ -14,7 +14,7 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { toast } from 'react-toastify';
 
 const Product = () => {
-  const user = useSelector(state => state.user);
+  const Credentials = useSelector(state => state.accessToken);
   const text = useSelector(state => state.generatedText);
   const histId = useSelector(state => state.historyId);
   const navigate = useNavigate(); // Initialize navigate
@@ -22,14 +22,12 @@ const Product = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector((state) => state.user && state.isLoading);
   
-  
-
 
   useEffect(() => {
-    if (!user) {
+    if (!Credentials) {
       navigate('/signin');
     }
-  }, [user]);
+  }, [Credentials]);
 
   // Fetch histories data
   useEffect(() => {

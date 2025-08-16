@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { axiosInstance } from '../../../utils/index';
+import axiosInstance  from '../../../utils/index';
 import { useSelector, useDispatch } from "react-redux";
 import { setGeneratedText, setHistoryId, setLoading ,setActiveHistory} from "../../../features/userSlice";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

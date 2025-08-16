@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { axiosInstance } from '../../../utils/index';
+import  axiosInstance  from '../../../utils/index';
 import { useDispatch, useSelector } from 'react-redux';
 import { register } from '../../../actions/authActions';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -43,7 +43,7 @@ const Signup = () => {
         <section className="bg-gray-900 min-h-screen flex">
             <div className="flex flex-col items-center justify-center w-4/5 mx-auto md:h-screen lg:py-0">
                 <Link to="/" className="flex items-center mb-6 text-2xl font-semibold text-slate-50">
-                    <img className="md:w-64 md:h-32 w-48 h-20" src="/images/logo.png" alt="logo" />
+                    <img className="md:w-64 md:h-32 w-48 h-20" src="/images/Logo.svg" alt="logo" />
                 </Link>
                 <div className="w-full bg-gray-800 rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 bg-gray-80 border-gray-700">
                     <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
