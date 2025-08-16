@@ -25,12 +25,12 @@ import AppProvider from '../utils/AppProvider.jsx';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-     <Route element={<AppProvider/>}>
+    
       <Route path='/' element={<Layout />}>
         <Route path='' element={<Home />} />
         <Route path='about' element={<About />} />
         <Route path='contactUs' element={<Explore />} />
-      </Route>
+    
     </Route>
       <Route path='/signin' element={<Signin />} />
       <Route path='/signup' element={<Signup />} />
