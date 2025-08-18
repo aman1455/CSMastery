@@ -1,8 +1,10 @@
 const User = require('../model/User');
 const {StatusCodes}= require('http-status-codes');
 const customError = require('../errors');
+const jwt = require('jsonwebtoken');
 const {attachCookiesToResponse} = require('../utils');
 const { token } = require('morgan');
+const { createAccessToken, createRefreshToken } = require('../utils/jwt');
 
 const register = async (req,res) => {
     const {email,name,password} = req.body;
@@ -38,8 +40,16 @@ const login = async (req,res) => {
     }
 
     const tokenUser = {name: user.name, userId: user._id, role: user.role};
-    attachCookiesToResponse({res,user: tokenUser})
-    res.status(StatusCodes.CREATED).json({user: tokenUser});
+     const accessToken = createAccessToken(tokenUser);
+  const refreshToken = createRefreshToken(tokenUser);
+
+   res.cookie("refreshToken", refreshToken, {
+    httpOnly: true,
+    secure: true,
+    sameSite: "None",
+    maxAge: 15 * 24 * 60 * 60 * 1000 // 15 days
+  });
+    res.status(StatusCodes.CREATED).json({user: tokenUser,accessToken});
 }
 // const logout = async (req,res) => {
 //     res.cookie('token','logout',{
@@ -51,9 +61,9 @@ const login = async (req,res) => {
 
 const logout = async (req, res) => {
     // Clear the logout cookie
-    res.clearCookie('token');
+    res.clearCookie('refreshToken');
 
-    res.cookie('token', 'logout', {
+    res.cookie('refreshToken', 'logout', {
         httpOnly: true,
         expires: new Date(Date.now()),
     });
@@ -62,6 +72,25 @@ const logout = async (req, res) => {
     // Send a response indicating successful logout
     res.send('User logged out');
 }
+
+const refreshAccessToken = (req, res) => {
+  const { refreshToken } = req.cookies;
+  if (!refreshToken) {
+    return res.status(401).json({ message: "No refresh token" });
+  }
+
+  try {
+    const decoded = jwt.verify(refreshToken, process.env.JWT_REFRESH_SECRET);
+    const newAccessToken = createAccessToken({
+      name: decoded.name,
+      userId: decoded.userId,
+      role: decoded.role
+    });
+    res.json({ accessToken: newAccessToken });
+  } catch (err) {
+    return res.status(403).json({ message: `Invalid refresh token ` });
+  }
+};
 
 module.exports = {
     logout,
@@ -72,4 +101,5 @@ module.exports = {
     register,
     login,
     logout,
+    refreshAccessToken
 }

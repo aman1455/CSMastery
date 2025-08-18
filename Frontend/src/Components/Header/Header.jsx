@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 
 export default function Header() {
     const user = useSelector(state => state.user);
+    const Authenticated = useSelector(state=>state.accessToken)
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
     
 
@@ -31,7 +32,7 @@ export default function Header() {
                         className=' absolute left-5'>
                         <FontAwesomeIcon icon={faBars} className="md:hidden" />
                     </span>
-                    {user ? (
+                    {Authenticated ? (
                         <div className="flex items-center lg:order-2">
                             <Avataricon/>
                         </div>

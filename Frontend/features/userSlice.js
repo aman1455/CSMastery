@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
+  accessToken: null,
   user: null,
   isLoading: false,
   generatedText: '',
@@ -13,6 +14,11 @@ const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
+    setCredentials:(state,action) => {
+      const {accessToken, user} = action.payload;
+      state.accessToken = accessToken;
+      state.user = user; 
+    },
     setUser: (state, action) => {
       state.user = action.payload;
       state.isLoading = false;
@@ -22,6 +28,7 @@ const userSlice = createSlice({
       state.isLoading = action.payload;
     },
     logout: (state) => {
+      state.accessToken = null;
       state.user = null;
     },
     setGeneratedText: (state, action) => {
@@ -39,5 +46,5 @@ const userSlice = createSlice({
   } 
 }); 
 
-export const { setUser, setLoading, logout, setGeneratedText,setQuiz,setHistoryId,setActiveHistory } = userSlice.actions;
+export const { setUser, setLoading,setCredentials, logout, setGeneratedText,setQuiz,setHistoryId,setActiveHistory } = userSlice.actions;
 export default userSlice.reducer;

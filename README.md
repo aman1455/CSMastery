@@ -2,7 +2,7 @@
 
 CSMastery is a comprehensive learning platform that offers AI-generated blog posts and interactive quizzes on various topics. Whether you're a curious learner or an avid quiz enthusiast, CSMastery provides a personalized and engaging learning experience.
 
-[![snap.jpg](https://i.postimg.cc/63d4h1wq/snap.jpg)](https://postimg.cc/TL3Pd0Kv)
+![CSMastery Preview](https://github.com/aman1455/CSMastery/blob/aman-dev/Frontend/public/images/HomePage.png)
 
 
 

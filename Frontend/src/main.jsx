@@ -1,7 +1,7 @@
 import React from 'react'
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { store } from '../store.js';
+import  store  from '../store.js';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -19,21 +19,26 @@ import Product from './Pages/Product/Product.jsx';
 import Explore from './Pages/Explore/Explore.jsx';
 import Error from './Pages/Error/Error.jsx';
 import Quiz from './Pages/Quiz/Quiz.jsx';
+import AppProvider from '../utils/AppProvider.jsx';
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
+    
       <Route path='/' element={<Layout />}>
         <Route path='' element={<Home />} />
         <Route path='about' element={<About />} />
         <Route path='contactUs' element={<Explore />} />
-      </Route>
-      <Route path='product' element={<Product />} />
+    
+    </Route>
       <Route path='/signin' element={<Signin />} />
       <Route path='/signup' element={<Signup />} />
       <Route path='/error' element={<Error />} />
+      <Route element={<AppProvider/>}>
+      <Route path='product' element={<Product />} />
       <Route path='/quiz' element={<Quiz />} />
+      </Route>
       <Route path='*' element ={<Error/>}/>
     </>
     // we have to add this fregments otherwise this will not work

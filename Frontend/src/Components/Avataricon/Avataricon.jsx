@@ -7,15 +7,15 @@ import { logoutUser } from '../../../actions/authActions';
 
 
 const Avataricon = () => {
-    const user = useSelector(state => state.user);
+    // const Authenticated = useSelector(state => state.accessToken);
     const [isLogOutOpen, setIsLogoutOpen] = useState(false);
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    useEffect(() => {
-        if (!user) {
-          navigate('/signin');
-        }
-      }, [user]);
+    // useEffect(() => {
+    //     if (!Authenticated) {
+    //       navigate('/signin');
+    //     }
+    //   }, [Authenticated]);
     const toggleLogout = () => {
         setIsLogoutOpen(!isLogOutOpen);
     }
@@ -38,7 +38,7 @@ const Avataricon = () => {
                     alt="avatar"
                 />
             </Link>
-            <span className="font-semibold text-lg md:block hidden">{user && user.name}</span>
+            {/* <span className="font-semibold text-lg md:block hidden">{user && user.name}</span> */}
 
 
             {/* Toggle Logout Box */}

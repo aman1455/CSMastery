@@ -1,5 +1,5 @@
-import { setLoading, setUser, logout, setGeneratedText,setQuiz,setActiveHistory,setHistoryId } from '../features/userSlice';
-import { axiosInstance } from '../utils/index';
+import { setLoading, setUser, logout, setGeneratedText,setQuiz,setActiveHistory,setHistoryId, setCredentials } from '../features/userSlice';
+import  axiosInstance  from '../utils/index';
 import {toast} from 'react-toastify'
 
 export const register = (userData, navigate) => async (dispatch) => {
@@ -10,7 +10,6 @@ export const register = (userData, navigate) => async (dispatch) => {
     navigate('/signin');
     toast.success('Account created successfully!');
     } catch (error) {
-    console.log(error.response.data.msg);
     toast.error(error.response.data.msg);
   } finally {
     dispatch(setLoading(false)); // Set loading to false after operation completes
@@ -21,7 +20,9 @@ export const login = (userData, navigate) => async (dispatch) => {
   dispatch(setLoading(true));
   try {
     const response = await axiosInstance.post('/api/v1/auth/login', userData);
+    console.log(response)
     dispatch(setUser(response.data.user));
+    dispatch(setCredentials({ accessToken: response.data.accessToken, user: response.data.user }));
     navigate('/product');
     toast.success('User logged in successfully!');
   } catch (error) {
@@ -49,6 +50,7 @@ export const logoutUser = (navigate) => async (dispatch) => {
 export const generateText = (textInput,activeHistory) => async (dispatch) => {
   dispatch(setLoading(true));
   try {
+    console.log(textInput);
     const response = await axiosInstance.post(`/api/v1/search?Topic=${textInput}`);
     const histId = response.data.histId;
     const activeSelect = async (histId) => {
