@@ -6,9 +6,6 @@ CSMastery is a comprehensive learning platform that offers AI-generated blog pos
 
 
 
-Visit the site here - [CSMastery](https://genius-gen.vercel.app/)
-
-How to use See the full video - [Youtube Tutorial](https://youtu.be/QCJET0iawEs?si=UCbwL5mcisjrdRsC)
 
 ## Features
 
